@@ -1,4 +1,3 @@
-
 const salaryInput = document.getElementById("salary");
 const expenseInputs = [...document.querySelectorAll(".expense")];
 

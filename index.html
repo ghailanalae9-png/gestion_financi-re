@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion d'un budget mensuel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="tag">ÉDUCATION FINANCIÈRE</p>
+    <h1>💰 Gestion d'un budget mensuel</h1>
+    <p>Organisez votre argent, maîtrisez vos dépenses et préparez votre avenir.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Votre situation financière</h2>
+      <p>Entrez votre salaire mensuel pour commencer.</p>
+
+      <label for="salary">Salaire mensuel (DH)</label>
+      <input id="salary" type="number" min="0" step="0.01"
+             placeholder="Exemple : 3000" value="3000">
+    </section>
+
+    <section class="card">
+      <h2>2. Répartition de votre budget</h2>
+      <p>Entrez le montant prévu pour chaque catégorie.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Montant (DH)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>🏠 Logement</td><td><input class="expense" id="housing" type="number" min="0" value="1000"></td></tr>
+            <tr><td>🍔 Alimentation</td><td><input class="expense" id="food" type="number" min="0" value="700"></td></tr>
+            <tr><td>🚌 Transport</td><td><input class="expense" id="transport" type="number" min="0" value="300"></td></tr>
+            <tr><td>📱 Téléphone</td><td><input class="expense" id="phone" type="number" min="0" value="100"></td></tr>
+            <tr><td>🎉 Loisirs</td><td><input class="expense" id="leisure" type="number" min="0" value="200"></td></tr>
+            <tr><td>🛒 Autres dépenses</td><td><input class="expense" id="other" type="number" min="0" value="200"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button id="calculate">Calculer mon budget</button>
+    </section>
+
+    <section class="card" id="results" aria-live="polite">
+      <h2>3. Résultat de votre budget</h2>
+
+      <div class="results-grid">
+        <div class="result-box">
+          <span>Salaire</span>
+          <strong id="salaryResult">3 000 DH</strong>
+        </div>
+        <div class="result-box">
+          <span>Total des dépenses</span>
+          <strong id="expensesResult">2 500 DH</strong>
+        </div>
+        <div class="result-box">
+          <span>Épargne restante</span>
+          <strong id="savingsResult">500 DH</strong>
+        </div>
+        <div class="result-box">
+          <span>Budget restant</span>
+          <strong id="balanceResult">500 DH</strong>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText">Une partie de votre salaire reste disponible.</p>
+      <div id="advice" class="advice"></div>
+    </section>
+
+    <section class="card">
+      <h2>4. Questions de réflexion</h2>
+      <p>Répondez à ces questions pour améliorer votre gestion financière.</p>
+
+      <label for="q1">1. Quel est le montant total de vos dépenses ?</label>
+      <input id="q1" placeholder="Votre réponse">
+
+      <label for="q2">2. Combien pouvez-vous épargner chaque mois ?</label>
+      <input id="q2" placeholder="Votre réponse">
+
+      <label for="q3">3. Que feriez-vous si vos dépenses augmentaient de 300 DH ?</label>
+      <textarea id="q3" rows="3" placeholder="Écrivez votre réponse..."></textarea>
+
+      <label for="q4">4. Quelles dépenses pourriez-vous réduire ?</label>
+      <textarea id="q4" rows="3" placeholder="Écrivez votre réponse..."></textarea>
+
+      <label for="q5">5. Pourquoi est-il important de planifier son budget ?</label>
+      <textarea id="q5" rows="3" placeholder="Écrivez votre réponse..."></textarea>
+
+      <button id="showAnswers" class="secondary">Voir des conseils de correction</button>
+      <div id="answers" class="advice hidden">
+        <h3>Exemples de bonnes réponses</h3>
+        <p><strong>1.</strong> Additionner tous les montants des dépenses.</p>
+        <p><strong>2.</strong> Salaire moins dépenses totales, si le résultat est positif.</p>
+        <p><strong>3.</strong> Réduire certaines dépenses non essentielles ou revoir le budget.</p>
+        <p><strong>4.</strong> Réduire les loisirs ou les achats non nécessaires.</p>
+        <p><strong>5.</strong> Contrôler ses dépenses, éviter les dettes et préparer ses projets.</p>
+      </div>
+    </section>
+
+    <section class="card conclusion">
+      <h2>5. Conclusion</h2>
+      <p>La gestion financière personnelle permet de mieux organiser son argent,
+        de contrôler ses dépenses et de réaliser ses objectifs grâce à une bonne
+        planification du budget.</p>
+      <p class="arabic" dir="rtl">هاد النشاط كيعلمنا كيفاش نقسمو الفلوس ديالنا بطريقة منظمة، ونوفرو جزء منها للمستقبل.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 — Activité d'éducation financière</footer>
+  <script src="script.js"></script>
+</body>
+</html>
